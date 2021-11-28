@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="practi.js" charset="utf-8"></script>
+    <script src="p.js" charset="utf-8"></script>
+    <script src="https://api.gazerecorder.com/GazeCloudAPI.js" ></script>
+    <script src= "eyetracker.js" ></script>
+    <title>Rubick's Race Game</title>
+</head>
+<body>
+    <header class = 'header'>
+    <div class = 'topbar'>
+        <div class = 'navbar'></div>
+            <div class = 'logobox'>
+                <a href = "/">
+                <img class = 'logo' src="brain.png" alt="brain image">
+                </a>
+            </div>
+            <div class = 'linkbox'>
+                <a href = "/logout" class = 'signuplnk'>Log Out</a>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class = gamezone>
+        <div class = internalgamezone>
+            <div class = containerofcontainers>
+                <div class = outsidecontainer_main>
+                    <div class = container>
+                        <div id = 'tile-alt'></div>
+                        <div id = 'tile4-alt'></div>
+                        <div id = 'tile7-alt'></div>
+                    </div>
+                    <div class = container>
+                        <div id = 'tile2-alt'></div>
+                        <div id = 'tile5-alt'></div>
+                        <div id = 'tile8-alt'></div>
+                    </div>
+                    <div class = container>
+                        <div id = 'tile3-alt'></div>
+                        <div id = 'tile6-alt'></div>
+                        <div id = 'tile9-alt'></div>
+                    </div>
+                </div>
+    
+                <div class = outsidecontainer_change >
+                    <div class = container oncontextmenu="return false;">
+                        <div id = 'tile' onmousedown="changeColour(this)"></div>
+                        <div id = 'tile4' onmousedown="changeColour(this)"></div>
+                        <div id = 'tile7'onmousedown="changeColour(this)"></div>
+                    </div>
+                    <div class = container oncontextmenu="return false;">
+                        <div id = 'tile2'onmousedown="changeColour(this)"></div>
+                        <div id = 'tile5'onmousedown="changeColour(this)"></div>
+                        <div id = 'tile8'onmousedown="changeColour(this)"></div>
+                    </div>
+                    <div class = container oncontextmenu="return false;">
+                        <div id = 'tile3'onmousedown="changeColour(this)"></div>
+                        <div id = 'tile6'onmousedown="changeColour(this)"></div>
+                        <div id = 'tile9'onmousedown="changeColour(this)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = white>
+    <div class = buttoninformation>
+        <div class = buttoninformation2>
+            <div class = buttoninformation3>
+                <button onclick = "reset()" class = 'newgame'>New Game</button>
+                <p class = 'moves'id = 'moves'>Moves: </p>
+               <button class = 'moves'id  type="button" onclick="GazeCloudAPI.StartEyeTracking();">Eyetracking Start</button>
+               <button class = 'moves'id  type="button" onclick="GazeCloudAPI.StopEyeTracking();"> Eyetracking Stop</button>
+            </div>
+        </div>
+    </div>
+    <div class = buttoninformation>
+        <div class = buttoninformation2>
+            <div class = buttoninformation3>
+                <p class = 'information'id = 'Winner'> Match each square on the right to the same colour as their counterpart on the left by left or right clicking on them to change their colour!</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

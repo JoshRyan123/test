@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api.gazerecorder.com/GazeCloudAPI.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="p.js" charset="utf-8"></script>
+    <script src= "eyetracker - snake.js" ></script>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Snake</title>
+</head>
+<body>
+    <header class = 'header'>
+        <div class = 'topbar'>
+            <div class = 'navbar'></div>
+                <div class = 'logobox'>
+                    <a href = "/">
+                    <img class = 'logo' src="brain.png" alt="brain image">
+                    </a>
+                </div>
+                <div class = 'linkbox'>
+                    <a href = "/logout" class = 'signuplnk'>Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class = 'gamearea'>
+    <div class = 'score' id = 'score'><span id = 'score-text'>Score: </span><span id = 'total-score'>0</span></div>
+    <canvas id = 'canvas'></canvas>
+    <script src = "snake.js"></script>
+    </div>
+     <div class = white>
+        <div class = buttoninformation>
+            <div class = buttoninformation2>
+                <div class = buttoninformation3>
+                    <button class = 'newgame' onclick = "reset()">New Game</button>
+                    <p class = 'moves'id = 'moves' visibility: hidden>Moves: </p>
+                    <button  class = 'moves newgame' type="button" onclick="GazeCloudAPI.StartEyeTracking();">Eyetracking Start</button>
+                    <button   class = 'moves newgame' type="button" onclick="GazeCloudAPI.StopEyeTracking();"> Eyetracking Stop</button>
+                </div>
+            </div>
+        </div>
+        <div class = buttoninformation>
+            <div class = buttoninformation2>
+                <div class = buttoninformation3>
+                    <p class = 'information'id = 'Winner'> Use the arrow keys to move the snake, and eat food to increase your score. But watch out for your tail!</p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
